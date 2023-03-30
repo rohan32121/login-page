@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form Validation</title>
+</head>
+<body>
+    <script>
+        function data(){
+        var a = document.getElementById("n1").value;
+        var b = document.getElementById("n2").value;
+        var c = document.getElementById("n3").value;
+
+        if (a=="" || b=="" || c==""){
+
+            alert ("All Fields Are Mandetory");
+            return false;
+
+        }
+        
+        else if (b!=c){
+
+            alert ("Password did't match");
+            return false;
+
+}
+
+        else if (b==c){
+
+            alert ("Password Velidation Successful");
+            return true;
+        }
+    }
+    </script>
+
+    <form onsubmit="data()">
+        User id: <input type="text" id=n1> <br><br>
+        password: <input type="password" id="n2"><br><br>
+        Conform password: <input type="password" id="n3"><br><br>
+        <input type="submit"><br><br>
+    </form>
+</body>
+</html>
